@@ -1,3 +1,7 @@
+# Kobee Raveendran
+# April 27, 2018
+# Alternating concatenation of two lists in python
+
 def combine_lists(list1, list2):
     new_list = []
     maxlen = 0
