@@ -6,6 +6,8 @@ public class anagrams_scratch
         System.out.println("Dog and God: " + anagrams("dog", "God"));
         System.out.println("Public relations and crap built on lies: " + anagrams("Public relations", "crap built on lies"));
         System.out.println("Racecar and racecars: " + anagrams("Racecar", "racecars"));
+        System.out.println("Cats and scat: " + anagrams("Cats", "scat"));
+        System.out.println("Scars and racks: " + anagrams("scars", "racks"));
     }
 
     public static boolean anagrams(String string1, String string2)
