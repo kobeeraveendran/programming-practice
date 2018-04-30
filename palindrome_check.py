@@ -1,9 +1,8 @@
 def isPalindrome(inputstring):
+    # accepts strings with spaces, punctuation, and varying case
+    inputstring = inputstring.replace(' ', '').replace(',', '').replace('.', '').lower()
+
     size = len(inputstring)
-
-    # accepts strings with spaces or varying case
-    inputstring = inputstring.replace(' ', '').lower()
-
     tempstring = inputstring
     inputstring = list(inputstring)
 
@@ -18,3 +17,5 @@ def isPalindrome(inputstring):
 
 print("Palindrome? - racecar: " + str(isPalindrome('racecar')))
 print("Palindrome? - cheese: " + str(isPalindrome('cheese')))
+print("Palindrome? - A but tuba: " + str(isPalindrome('A but tuba.')))
+print("Palindrome? - A car, a man, a maraca: " + str(isPalindrome('A car, a man, a maraca')))
