@@ -3,14 +3,15 @@ def translate_to_pig(english):
 
     newstringlist = []
 
-    lettercount = 0
+    wordcount = 0
     for string in stringlist:
         templist = list(string)
         tempchar = templist[0]
         templist.append(tempchar.lower())
         templist.remove(tempchar)
-        if lettercount == 0:
-            templist[0].upper()
+        if wordcount == 0:
+            templist[0] = templist[0].upper()
+            wordcount += 1
         templist.append('ay')
         newstringlist.append(''.join(templist))
         newstringlist.append(' ')
