@@ -1,3 +1,9 @@
+# Kobee Raveendran
+# Matrix Elements Sum - CodeFights
+# given a 2D matrix (where each entry is a 'room' with a price), 
+# find the total cost of all valid rooms. Rooms that have a cost of
+# 0 (free) and all rooms below that room are invalid.
+
 import numpy as np
 
 def matrixElementsSum(matrix):
