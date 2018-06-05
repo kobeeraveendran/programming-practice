@@ -10,15 +10,15 @@ def palindromeRearranging(inputString):
             lettercount[char] = 1
 
     stringlen = len(inputString)
-    centerflag = 0
+    center_candidates = 0
 
     for key in lettercount:
         if lettercount[key] % 2 != 0:
-            if stringlen % 2 != 0 and centerflag == 1:
-                return False
-            elif stringlen % 2 == 0:
-                return False
-            else:
-                centerflag == 1
-    
+            center_candidates += 1
+
+    if stringlen % 2 != 0 and center_candidates > 1:
+        return False
+    elif stringlen % 2 == 0 and center_candidates > 0:
+        return False
+        
     return True
