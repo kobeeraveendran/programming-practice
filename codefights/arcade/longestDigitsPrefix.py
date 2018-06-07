@@ -1,6 +1,5 @@
 def longestDigitsPrefix(inputString):
     digitlist = []
-    i = 0
 
     for i in range(len(inputString)):
         if not inputString[i].isdigit():
