@@ -3,60 +3,43 @@ import numpy as np
 def minesweeper(matrix):
 
     new_board = np.zeros((len(matrix), len(matrix[0])), dtype = int)
-    matrix = np.array(matrix)
-    new_matrix = np.zeros((len(matrix), len(matrix[0])), dtype = int)
 
-    for row in range(len(matrix)):
-        for col in range(len(matrix[0])):
-            if matrix[row][col]:
-                matrix[row][col] = 1
-                new_matrix[row][col] = 1
-                new_board[row][col] = 1
-            else:
-                matrix[row][col] = 0
+    board_height = len(matrix[0])
+    board_width = len(matrix)
 
-    for row in range(len(matrix)):
-        for col in range(len(matrix[0])):
-            # top left corner
-            if row == 0 and col == 0:
-                new_board[row][col] = sum(matrix[row + 1][x] for x in range(col, col + 2)) + matrix[row][col + 1]
-                
-            # bottom right corner
-            elif row == len(matrix) - 1 and col == len(matrix[0]) - 1:
-                new_board[row][col] = sum(matrix[row - 1][x] for x in range(col - 1, col + 1)) + matrix[row][col - 1]
-                
-            # top right corner
-            elif col == len(matrix[0]) - 1 and row == 0:
-                new_board[row][col] = sum(matrix[row + 1][x] for x in range(col - 1, col + 1)) + matrix[row][col - 1]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            mine_count = 0
+            # top
+            if j < board_height - 1:
+                mine_count += 1 if matrix[i][j + 1] else 0          
             
-            # bottom left corner
-            elif row == len(matrix) - 1 and col == 0:
-                new_board[row][col] = sum(matrix[row - 1][x] for x in range(col, col + 2)) + matrix[row][col + 1]
-                
-            # non-corner border tiles
-            
-            # left side
-            elif col == 0:
-                new_board[row][col] = sum(matrix[x][col + 1] for x in range(row - 1, row + 2)) + matrix[row - 1][col] + matrix[row + 1][col]
-            
-            # top side
-            elif row == 0:
-                new_board[row][col] = sum(matrix[row + 1][x] for x in range(col - 1, col + 2)) + matrix[row][col - 1] + matrix[row][col + 1]
+            # right
+            if i < board_width - 1:
+                mine_count += 1 if matrix[i + 1][j] else 0   
 
-            # right side
-            elif col == len(matrix[0]) - 1:
-                new_board[row][col] = sum(matrix[x][col - 1] for x in range(row - 1, row + 2)) + matrix[row - 1][col] + matrix[row + 1][col]
+            # left
+            if i > 0:
+                mine_count += 1 if matrix[i - 1][j] else 0    
+            
+            # bottom
+            if j > 0:
+                mine_count += 1 if matrix[i][j - 1] else 0    
+            
+            # diagonals
+            if i < board_width - 1 and j < board_height - 1:
+                mine_count += 1 if matrix[i + 1][j + 1] else 0                
 
-            # bottom side
-            elif row == len(matrix) - 1:
-                new_board[row][col] = sum(matrix[row - 1][x] for x in range(col - 1, col + 2)) + matrix[row][col - 1] + matrix[row][col + 1]
-                
-            # general case (inner tiles)
-            else:
-                row1 = sum(matrix[row - 1][x] for x in range(col - 1, col + 2)) #sum(matrix[row - 1][col - 1:col + 2])
-                row2 = matrix[row][col - 1] + matrix[row][col + 1]
-                row3 = sum(matrix[row + 1][x] for x in range(col - 1, col + 2)) #sum(matrix[row + 1][col - 1:col + 2])
-                new_board[row][col] = sum([row1, row2, row3])
+            if i < board_width - 1 and j > 0:
+                mine_count += 1 if matrix[i + 1][j - 1] else 0               
+
+            if i > 0 and j < board_height - 1:
+                mine_count += 1 if matrix[i - 1][j + 1] else 0                
+
+            if i > 0 and j > 0:
+                mine_count += 1 if matrix[i - 1][j - 1] else 0
+
+            new_board[i][j] = mine_count       
 
     return new_board
 
@@ -92,6 +75,8 @@ test8 = [[True, True],
 
 test9 = [[True, True], 
          [True, True]]
+
+
 
 print(minesweeper(test1))
 print(minesweeper(test2))
