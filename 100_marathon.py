@@ -93,4 +93,13 @@ def problem11(sequence):
     nums = sequence.split(',')
     return ','.join([x for x in nums if int(x, 2) % 5 == 0])
 
-print(problem11('0100,0011,1010,1001'))
+#print(problem11('0100,0011,1010,1001'))
+
+def problem12():
+    return ','.join([str(x) for x in range(1000, 3001) if even_digits(x)])
+
+def even_digits(x):
+    even_test = [int(i) % 2 == 0 for i in str(x)]
+    return all(even_test)
+
+#print(problem12())
