@@ -46,4 +46,22 @@ class problem5(object):
 str_obj = problem5()
 #str_obj.getString()
 #str_obj.printString()
+import numpy as np
+import math
 
+def problem6(input_sequence):
+    vals = input_sequence.split(',')
+    c = 50
+    h = 30
+    retval = ''
+
+    for i in range(len(vals)):
+        q = int(np.round(math.sqrt((2 * c * int(vals[i])) / h)))
+        if i == len(vals):
+            retval += str(q)
+        else:
+            retval += str(q) + ','
+
+    return retval
+
+#print(problem6('100,150,180'))
