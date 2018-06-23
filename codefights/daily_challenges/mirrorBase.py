@@ -16,5 +16,6 @@ def base_convert(num, target_base):
         num //= target_base
 
     return ''.join(reversed(remainders))
+
 print(mirrorBase('121', 4, 2))
 print(mirrorBase('505', 6, 7))
