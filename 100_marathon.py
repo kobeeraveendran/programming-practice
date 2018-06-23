@@ -87,3 +87,10 @@ def problem10(sequence):
     return ' '.join(sorted(list(set(sequence.split(' ')))))
 
 #print(problem10('hello world and practice makes perfect and hello world again'))
+
+def problem11(sequence):
+    # convert to base 10
+    nums = sequence.split(',')
+    return ','.join([x for x in nums if int(x, 2) % 5 == 0])
+
+print(problem11('0100,0011,1010,1001'))
