@@ -82,3 +82,8 @@ def problem9(sequence):
         print(sequence[i].upper())
 
 #problem9(['Hello world','Practice makes perfect'])
+
+def problem10(sequence):
+    return ' '.join(sorted(list(set(sequence.split(' ')))))
+
+#print(problem10('hello world and practice makes perfect and hello world again'))
