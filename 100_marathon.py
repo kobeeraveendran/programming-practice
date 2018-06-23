@@ -76,3 +76,9 @@ def problem8(sequence):
     return ','.join(sorted(words))
 
 #print(problem8('without,hello,bag,world'))
+
+def problem9(sequence):
+    for i in range(len(sequence)):
+        print(sequence[i].upper())
+
+#problem9(['Hello world','Practice makes perfect'])
