@@ -32,3 +32,18 @@ def problem4(input):
     print(as_tuple)
 
 #problem4('34,67,55,33,12,98')
+
+class problem5(object):
+    def __init__(self):
+        self.input_str = ''
+
+    def getString(self):
+        self.input_str = input()
+    
+    def printString(self):
+        print(self.input_str)
+
+str_obj = problem5()
+#str_obj.getString()
+#str_obj.printString()
+
