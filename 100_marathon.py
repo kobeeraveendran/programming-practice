@@ -126,4 +126,10 @@ def problem14(sentence):
     print(upper_count)
     print(lower_count)
 
-problem14('Hello world!')
+#problem14('Hello world!')
+
+def problem15(digit):
+    vals = [str(digit) * i for i in range(1,5)]
+    return sum([int(x) for x in vals])
+
+print(problem15(9))
