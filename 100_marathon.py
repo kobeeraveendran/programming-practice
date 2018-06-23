@@ -117,4 +117,13 @@ def problem13(sentence):
     print('LETTERS ' + str(letters))
     print('DIGITS ' + str(digits))
 
-problem13('hello world! 123')
+#problem13('hello world! 123')
+
+def problem14(sentence):
+    upper_count = sum(1 for char in sentence if char.isupper())
+    lower_count = sum(1 for char in sentence if char.islower())
+
+    print(upper_count)
+    print(lower_count)
+
+problem14('Hello world!')
