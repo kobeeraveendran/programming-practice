@@ -22,4 +22,13 @@ def problem3(n):
 
     return retval
 
-print(problem3(8))
+#print(problem3(8))
+
+def problem4(input):
+    nums = input.split(',')
+    as_tuple = tuple(nums)
+
+    print(nums)
+    print(as_tuple)
+
+#problem4('34,67,55,33,12,98')
