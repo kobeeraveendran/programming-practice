@@ -14,3 +14,12 @@ def problem2(n):
     return n * problem2(n - 1)
 
 #print(problem2(8))
+
+def problem3(n):
+    retval = {}
+    for i in range(1, n + 1):
+        retval[i] = i ** 2
+
+    return retval
+
+print(problem3(8))
