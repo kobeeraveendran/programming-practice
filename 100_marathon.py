@@ -65,3 +65,14 @@ def problem6(input_sequence):
     return retval
 
 #print(problem6('100,150,180'))
+
+def problem7(x, y):
+    return [[i * j for i in range(y)] for j in range(x)]
+
+#print(problem7(3, 5))
+
+def problem8(sequence):
+    words = sequence.split(',')
+    return ','.join(sorted(words))
+
+#print(problem8('without,hello,bag,world'))
