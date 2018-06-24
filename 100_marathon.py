@@ -161,4 +161,12 @@ def problem18(passwords):
 
     print(','.join(valid_passwords))
 
-problem18('ABd1234@1,a F1#,2w3E*,2We3345')
+#problem18('ABd1234@1,a F1#,2w3E*,2We3345')
+
+import operator
+
+def problem19(people):
+    as_tuple = [tuple(person.split(',')) for person in people]
+    return sorted(as_tuple, key = operator.itemgetter(0, 1, 2))
+
+print(problem19(['Tom,19,80', 'John,20,90', 'Jony,17,91', 'Jony,17,93', 'Json,21,85']))
