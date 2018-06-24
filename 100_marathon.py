@@ -138,4 +138,14 @@ def problem16(inputlist):
     as_list = inputlist.split(',')
     return ','.join([str(int(x) ** 2) for x in as_list if int(x) % 2 == 1])
 
-print(problem16('1,2,3,4,5,6,7,8,9'))
+#print(problem16('1,2,3,4,5,6,7,8,9'))
+
+def problem17(transactions):
+    transactions = [(transaction.split(' ')[0], int(transaction.split(' ')[1])) for transaction in transactions]
+    balance = 0
+    for transaction in transactions:
+        balance += transaction[1] if transaction[0] == 'D' else (-1 * transaction[1])
+
+    return balance
+
+print(problem17(['D 300', 'D 300', 'W 200', 'D 100']))
