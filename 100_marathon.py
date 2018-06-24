@@ -132,4 +132,10 @@ def problem15(digit):
     vals = [str(digit) * i for i in range(1,5)]
     return sum([int(x) for x in vals])
 
-print(problem15(9))
+#print(problem15(9))
+
+def problem16(inputlist):
+    as_list = inputlist.split(',')
+    return ','.join([str(int(x) ** 2) for x in as_list if int(x) % 2 == 1])
+
+print(problem16('1,2,3,4,5,6,7,8,9'))
