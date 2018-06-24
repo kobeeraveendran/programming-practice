@@ -177,5 +177,14 @@ def problem20(n):
             yield i
 
 generator = problem20(100)
-for i in generator:
-    print(i)
+#for i in generator:
+#    print(i)
+
+def problem21(movements):
+    movements = [tuple(move.split(' ')) for move in movements]
+    delta_y = sum([int(y[1]) for y in movements if y[0] == 'UP']) - sum([int(y[1]) for y in movements if y[0] == 'DOWN'])
+    delta_x = sum([int(x[1]) for x in movements if x[0] == 'RIGHT']) - sum([int(x[1]) for x in movements if x[0] == 'LEFT'])
+
+    return round(math.sqrt(delta_x ** 2 + delta_y ** 2))
+
+print(problem21(['UP 5', 'DOWN 3', 'LEFT 3', 'RIGHT 2']))
