@@ -169,4 +169,13 @@ def problem19(people):
     as_tuple = [tuple(person.split(',')) for person in people]
     return sorted(as_tuple, key = operator.itemgetter(0, 1, 2))
 
-print(problem19(['Tom,19,80', 'John,20,90', 'Jony,17,91', 'Jony,17,93', 'Json,21,85']))
+#print(problem19(['Tom,19,80', 'John,20,90', 'Jony,17,91', 'Jony,17,93', 'Json,21,85']))
+
+def problem20(n):
+    for i in range(n):
+        if i % 7 == 0:
+            yield i
+
+generator = problem20(100)
+for i in generator:
+    print(i)
