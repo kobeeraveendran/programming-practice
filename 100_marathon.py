@@ -148,4 +148,17 @@ def problem17(transactions):
 
     return balance
 
-print(problem17(['D 300', 'D 300', 'W 200', 'D 100']))
+#print(problem17(['D 300', 'D 300', 'W 200', 'D 100']))
+
+import re
+def problem18(passwords):
+    passwords = passwords.split(',')
+    valid_passwords = []
+
+    for password in passwords:
+        if len(password) >= 6 and len(password) <= 12 and re.search('[a-z]', password) and re.search('[0-9]', password) and re.search('[A-Z]', password) and re.search('[$#@]', password):
+            valid_passwords.append(password)
+
+    print(','.join(valid_passwords))
+
+problem18('ABd1234@1,a F1#,2w3E*,2We3345')
