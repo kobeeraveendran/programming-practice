@@ -321,4 +321,9 @@ def problem37(value):
 def problem38(input_list):
     return list(filter(lambda x: x % 2 == 0, input_list))
 
-print(problem38([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+#print(problem38([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+def problem39(input_list):
+    return list(map(lambda x: x ** 2, input_list))
+
+print(problem39([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
