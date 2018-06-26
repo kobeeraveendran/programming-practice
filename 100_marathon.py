@@ -235,3 +235,8 @@ def problem26(num1, num2):
     return num1 + num2
 
 #print(problem26(3, 5))
+
+def problem27(integer):
+    print(str(integer))
+
+problem27(9)
