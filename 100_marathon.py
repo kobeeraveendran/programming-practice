@@ -209,4 +209,13 @@ def problem22(sentence):
 def problem23(n):
     return n ** 2
 
-print(problem23(4))
+#print(problem23(4))
+
+def problem24(function):
+    print('Function: ' + function + '()')
+    print(eval(function + '.__doc__'))
+    print('\n')
+
+problem24('abs')
+problem24('int')
+problem24('input')
