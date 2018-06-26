@@ -216,6 +216,16 @@ def problem24(function):
     print(eval(function + '.__doc__'))
     print('\n')
 
-problem24('abs')
-problem24('int')
-problem24('input')
+#problem24('abs')
+#problem24('int')
+#problem24('input')
+
+class Person():
+    name = 'Person'
+
+    def __init__(self, name = None):
+        self.name = name
+
+kobee = Person()
+kobee.name = 'Kobee'
+print(kobee.name)
