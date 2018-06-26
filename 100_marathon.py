@@ -302,4 +302,13 @@ def problem34(start, end):
 def problem35(start, end):
     print([x ** 2 for x in range(start, end + 1)])
 
-problem35(1, 20)
+#problem35(1, 20)
+
+# half tuple problem (others were skipped)
+def problem36(input):
+    tuple_size = len(input)
+
+    print(input[:tuple_size // 2])
+    print(input[tuple_size // 2:])
+
+problem36((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
