@@ -364,4 +364,9 @@ def problem43(email):
 def problem44(email):
     return email.split('@')[1].split('.')[0]
 
-print(problem44('john@google.com'))
+#print(problem44('john@google.com'))
+
+def problem45(sequence):
+    return [word for word in sequence.split() if word.isdigit()]
+
+print(problem45('2 cats 3 dogs'))
