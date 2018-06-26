@@ -359,5 +359,9 @@ rect = Rectange(2, 10)
 def problem43(email):
     return email.split('@')[0]
 
-print(problem43('john@google.com'))
+#print(problem43('john@google.com'))
 
+def problem44(email):
+    return email.split('@')[1].split('.')[0]
+
+print(problem44('john@google.com'))
