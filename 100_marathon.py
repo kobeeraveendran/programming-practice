@@ -249,4 +249,15 @@ def problem28(num1, num2):
 def problem29(str1, str2):
     print(str1 + str2)
 
-problem29('cat', 'dog')
+#problem29('cat', 'dog')
+
+def problem30(str1, str2):
+    strings = [str1, str2]
+    if len(str1) == len(str2):
+        print(str1)
+        print(str2)
+
+    else:
+        print(strings[strings.index(max(strings))])
+
+problem30('one', 'three')
