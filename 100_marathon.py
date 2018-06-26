@@ -189,7 +189,7 @@ def problem21(movements):
 
 #print(problem21(['UP 5', 'DOWN 3', 'LEFT 3', 'RIGHT 2']))
 
-def problem21(sentence):
+def problem22(sentence):
     sentence = sentence.split()
     frequency = {}
 
@@ -204,4 +204,9 @@ def problem21(sentence):
     for key in sorted_keys:
         print(str(key) + ': ' + str(frequency[key]))
 
-problem21('New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.')
+#problem22('New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.')
+
+def problem23(n):
+    return n ** 2
+
+print(problem23(4))
