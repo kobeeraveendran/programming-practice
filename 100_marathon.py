@@ -382,4 +382,19 @@ def problem47(n):
 
     return problem47(n - 1) + 100
 
-print(problem47(5))
+#print(problem47(5))
+
+def problem48(n):
+    
+    a0 = 0
+    a1 = 1
+    c = 0
+
+    for i in range(n):
+        c = a0 + a1
+        a0 = a1
+        a1 += 1
+
+    return c
+
+print(problem48(7))
