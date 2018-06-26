@@ -369,4 +369,9 @@ def problem44(email):
 def problem45(sequence):
     return [word for word in sequence.split() if word.isdigit()]
 
-print(problem45('2 cats 3 dogs'))
+#print(problem45('2 cats 3 dogs'))
+
+def problem46(n):
+    return sum([x / (x + 1) for x in range(1, n + 1)])
+
+print(problem46(4))
