@@ -282,7 +282,7 @@ def problem32(start, end):
 
 #problem32(1, 3)
 #problem32(1, 20)
-'''
+
 def problem33(start, end):
     squares = {}
 
@@ -293,4 +293,3 @@ def problem33(start, end):
         print(squares[key])
 
 problem33(1, 20)
-'''
