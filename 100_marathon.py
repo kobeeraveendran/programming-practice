@@ -332,3 +332,13 @@ def problem40(input_list):
     return list(map(lambda x: x ** 2, list(filter(lambda x: x % 2 == 0, input_list))))
 
 print(problem40([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+class Circle():
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * (self.radius ** 2)
+
+circle = Circle(2)
+print(circle.area())
