@@ -260,4 +260,9 @@ def problem30(str1, str2):
     else:
         print(strings[strings.index(max(strings))])
 
-problem30('one', 'three')
+#problem30('one', 'three')
+
+def problem31(num):
+    print('It is an even number') if num % 2 == 0 else print('It is an odd number')
+
+problem31(6)
