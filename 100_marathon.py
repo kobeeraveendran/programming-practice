@@ -292,4 +292,10 @@ def problem33(start, end):
     for key in squares:
         print(squares[key])
 
-problem33(1, 20)
+#problem33(1, 20)
+
+def problem34(start, end):
+    print([x for x in range(start, end + 1)])
+
+#problem34(1, 20)
+
