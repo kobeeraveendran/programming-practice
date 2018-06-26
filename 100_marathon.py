@@ -220,12 +220,18 @@ def problem24(function):
 #problem24('int')
 #problem24('input')
 
+# problem 25
 class Person():
     name = 'Person'
 
     def __init__(self, name = None):
         self.name = name
 
-kobee = Person()
-kobee.name = 'Kobee'
-print(kobee.name)
+#kobee = Person()
+#kobee.name = 'Kobee'
+#print(kobee.name)
+
+def problem26(num1, num2):
+    return num1 + num2
+
+#print(problem26(3, 5))
