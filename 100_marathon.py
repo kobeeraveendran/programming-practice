@@ -299,3 +299,7 @@ def problem34(start, end):
 
 #problem34(1, 20)
 
+def problem35(start, end):
+    print([x ** 2 for x in range(start, end + 1)])
+
+problem35(1, 20)
