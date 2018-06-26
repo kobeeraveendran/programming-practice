@@ -355,3 +355,9 @@ class Rectange():
 rect = Rectange(2, 10)
 #print(rect.area())
 
+# email username extraction problem
+def problem43(email):
+    return email.split('@')[0]
+
+print(problem43('john@google.com'))
+
