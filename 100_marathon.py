@@ -265,4 +265,32 @@ def problem30(str1, str2):
 def problem31(num):
     print('It is an even number') if num % 2 == 0 else print('It is an odd number')
 
-problem31(6)
+#problem31(6)
+
+def problem32(start, end):
+    if start >= end:
+        print('Invalid start/end combination')
+        return
+
+    squares = {}
+
+    for i in range(start, end + 1):
+        squares[i] = i ** 2
+    
+    print(squares)
+    return
+
+#problem32(1, 3)
+#problem32(1, 20)
+'''
+def problem33(start, end):
+    squares = {}
+
+    for i in range(start, end + 1):
+        squares[i] = i ** 2
+
+    for key in squares:
+        print(squares[key])
+
+problem33(1, 20)
+'''
