@@ -187,4 +187,21 @@ def problem21(movements):
 
     return round(math.sqrt(delta_x ** 2 + delta_y ** 2))
 
-print(problem21(['UP 5', 'DOWN 3', 'LEFT 3', 'RIGHT 2']))
+#print(problem21(['UP 5', 'DOWN 3', 'LEFT 3', 'RIGHT 2']))
+
+def problem21(sentence):
+    sentence = sentence.split()
+    frequency = {}
+
+    for word in sentence:
+        if word in frequency:
+            frequency[word] += 1
+        else:
+            frequency[word] = 1
+
+    sorted_keys = sorted(frequency.keys())
+
+    for key in sorted_keys:
+        print(str(key) + ': ' + str(frequency[key]))
+
+problem21('New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.')
