@@ -374,4 +374,12 @@ def problem45(sequence):
 def problem46(n):
     return sum([x / (x + 1) for x in range(1, n + 1)])
 
-print(problem46(4))
+#print(problem46(4))
+
+def problem47(n):
+    if n == 0:
+        return 1
+
+    return problem47(n - 1) + 100
+
+print(problem47(5))
