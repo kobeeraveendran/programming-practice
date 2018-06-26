@@ -244,4 +244,9 @@ def problem27(integer):
 def problem28(num1, num2):
     print(str(int(num1) + int(num2)))
 
-problem28('9', '10')
+#problem28('9', '10')
+
+def problem29(str1, str2):
+    print(str1 + str2)
+
+problem29('cat', 'dog')
