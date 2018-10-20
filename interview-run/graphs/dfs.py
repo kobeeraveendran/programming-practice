@@ -9,4 +9,12 @@ class Graph:
         self.graph[u].append(v)
 
     def dfs(self, start):
-        
+        visited = [False for x in range(len(self.graph))]
+
+        stack = [start]
+
+        while stack):
+            curr = stack.pop()
+            
+            
+
